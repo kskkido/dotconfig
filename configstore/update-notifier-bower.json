@@ -1,0 +1,10 @@
+{
+	"optOut": false,
+	"lastUpdateCheck": 1619161647054,
+	"update": {
+		"latest": "1.8.12",
+		"current": "1.8.8",
+		"type": "patch",
+		"name": "bower"
+	}
+}
