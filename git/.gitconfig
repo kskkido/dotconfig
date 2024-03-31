@@ -1,0 +1,18 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Keisuke Kido
+	email = kskkido@gmail.com
+[core]
+  excludesFile = ~/.config/git/.gitignore
+	ignorecase = false
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+  sc = rev-parse --abbrev-ref HEAD
+  showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; };f"
+  openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; };f"
+[url "git@github.com:"]
+  insteadOf = https://github.com/
